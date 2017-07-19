@@ -14,6 +14,7 @@ sudo apt-get update
 
 # Install base packages
 sudo apt-get install pkg-config zip g++ zlib1g-dev unzip
+sudo apt-get install gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 gir1.2-clutter-1.0
 
 # Install Java 8
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
