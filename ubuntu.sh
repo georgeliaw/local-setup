@@ -9,6 +9,7 @@ BAZEL_VERSION=0.5.2
 # Add PPAs
 sudo add-apt-repository ppa:webupd8team/java
 sudo add-apt-repository ppa:webupd8team/terminix
+sudo add-apt-repository ppa:snwh/pulp
 sudo apt-get update
 
 # Install base packages
@@ -23,6 +24,11 @@ sudo apt-get install gnome-shell
 
 # Install Tilix
 sudo apt-get install tilix
+
+# Install Paper themes
+sudo apt-get install paper-icon-theme
+sudo apt-get install paper-cursor-theme
+sudo apt-get install paper-gtk-theme
 
 # Install Bazel
 wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
