@@ -1,0 +1,26 @@
+---
+# tasks file for pycharm
+
+- name: Download and extract PyCharm
+  unarchive:
+    src: "{{ pycharm_download_url }}"
+    dest: "~"
+    remote_src: yes
+
+- name: Download and extract plugins
+  unarchive:
+    src: "{{ pycharm_plugin_download_mirror }}{{ item }}"
+    dest: "{{ pycharm_install_dir }}/plugins"
+    remote_src: yes
+  with_items: "{{ pycharm_plugins }}"
+
+- name: Update PyCharm symlink
+  file:
+    src: "{{ pycharm_install_dir }}"
+    dest: "~/pycharm"
+    state: link
+
+- name: Add PyCharm to desktop
+  template:
+    src: pycharm.desktop
+    dest: "~/.local/share/applications/jetbrains-pycharm-ce.desktop"

@@ -2,6 +2,28 @@
 
 - hosts: localhost
   tasks:
-    - name: Install java
+    - name: Install Chrome
+      include_role:
+        name: chrome
+
+    - name: Install Java
       include_role:
         name: java
+
+    - name: Install PyCharm
+      include_role:
+        name: pycharm
+
+    - name: Set favorites
+      dconf:
+        key: /org/gnome/shell/favorite-apps
+        value: >
+          "[
+              'google-chrome.desktop',
+              'firefox.desktop',
+              'com.gexperts.Tilix.desktop',
+              'org.gnome.Nautilus.desktop',
+              'slack.desktop',
+              'jetbrains-pycharm-ce.desktop'
+           ]"
+        state: present
