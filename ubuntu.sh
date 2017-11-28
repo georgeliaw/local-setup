@@ -49,9 +49,8 @@ apt-get install -y silversearcher-ag
 
 # Install Fuzzy Finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 
 # Update bashrc
 echo "export PATH=\"$PATH:$HOME/bin\"" >> ~/.bashrc
 echo "source ~/.bazel/bin/bazel-complete.bash" >> ~/.bashrc
-echo "[ -f ~/.fzf.bash ] && source ~/.fzf.bash" >> ~/.bashrc
