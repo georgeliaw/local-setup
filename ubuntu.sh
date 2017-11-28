@@ -36,9 +36,10 @@ cd ~/Downloads
 wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 chmod +x bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 ./bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
+sudo cp ~/.bazel/bin/bazel-complete.bash /etc/bash_completion.d/
 
 # Install Silver Searcher
-apt-get install -y silversearcher-ag
+sudo apt-get install -y silversearcher-ag
 
 # Install Fuzzy Finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -46,4 +47,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # Update bashrc
 echo "export PATH=\"$PATH:$HOME/bin\"" >> ~/.bashrc
-echo "source ~/.bazel/bin/bazel-complete.bash" >> ~/.bashrc
+
+source ~/.bashrc
