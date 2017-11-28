@@ -60,7 +60,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # Update bashrc
 echo 'export EDITOR=nano' >> ~/.bashrc
-echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
+echo 'export PATH="$PATH:$HOME/bin:$HOME/.local/bin"' >> ~/.bashrc
 
 # Update nanorc
 echo 'set tabsize 4' >> ~/.nanorc
