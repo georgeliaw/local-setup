@@ -1,0 +1,26 @@
+---
+# tasks file for common
+
+- name: Add apt repositories
+  apt_repository:
+    repo: "{{ item }}"
+  with_items: "{{ common_apt_repos }}"
+
+- name: Install apt packages
+  apt:
+    name: "{{ item }}"
+  with_items: "{{ common_apt_packages }}"
+
+- name: Install deb packages
+  apt:
+    deb: "{{ item }}"
+  with_items: "{{ common_deb_packages }}"
+
+- name: Download fuzzy finder
+  git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: "~/.fzf"
+    depth: 1
+
+- name: Install fuzzy finder
+  shell: "~/.fzf/install --all"

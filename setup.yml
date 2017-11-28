@@ -2,9 +2,9 @@
 
 - hosts: localhost
   tasks:
-    - name: Install Chrome
+    - name: Install common packages
       include_role:
-        name: chrome
+        name: common
 
     - name: Install Java
       include_role:
@@ -13,14 +13,6 @@
     - name: Install PyCharm
       include_role:
         name: pycharm
-
-    - name: Install Tilix
-      include_role:
-        name: tilix
-
-    - name: Install Slack
-      include_role:
-        name: slack
 
     - name: Set favorites
       dconf:

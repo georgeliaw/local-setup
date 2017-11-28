@@ -1,0 +1,22 @@
+---
+# defaults file for common
+
+common_apt_repos:
+  - ppa:snwh/pulp
+  - ppa:webupd8team/terminix
+
+common_apt_packages:
+  - silversearcher-ag
+  - paper-icon-theme
+  - paper-cursor-theme
+  - paper-gtk-theme
+  - tilix
+
+common_slack_version: 2.9.0
+common_slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+
+common_chrome_download_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+
+common_deb_packages:
+  - "{{ common_slack_download_url }}"
+  - "{{ common_chrome_download_url }}"

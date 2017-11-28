@@ -1,5 +1,0 @@
----
-# defaults file for slack
-
-slack_version: 2.9.0
-slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
