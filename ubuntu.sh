@@ -32,6 +32,7 @@ sudo apt-get install -y paper-cursor-theme
 sudo apt-get install -y paper-gtk-theme
 
 # Install Bazel
+cd ~/Downloads
 wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 chmod +x bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 ./bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
