@@ -6,17 +6,26 @@ common_apt_repos:
   - ppa:webupd8team/terminix
 
 common_apt_packages:
+  # system
   - python-dev
   - gir1.2-gtop-2.0
   - gir1.2-networkmanager-1.0
   - gir1.2-clutter-1.0
+
+  # gnome3
   - gnome-shell
   - gnome-tweak-tool
-  - silversearcher-ag
   - paper-icon-theme
   - paper-cursor-theme
   - paper-gtk-theme
+
+  # tools
+  - silversearcher-ag
   - tilix
+  - curl
+  - htop
+  - iotop
+  - iftop
 
 common_pip_packages:
   - psutil
