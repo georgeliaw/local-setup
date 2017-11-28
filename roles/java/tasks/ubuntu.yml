@@ -1,0 +1,16 @@
+---
+
+- name: install webupd8 team java ppa (for oracle java)
+  apt_repository: repo='ppa:webupd8team/java' state=present
+
+- name: accept oracle license
+  debconf:
+    name: "{{ item }}"
+    question: shared/accepted-oracle-license-v1-1
+    value: true
+    vtype: select
+  with_items: "{{ java_packages }}"
+
+- name: install java packages
+  apt: pkg={{ item }} state=latest
+  with_items: "{{ java_packages }}"
