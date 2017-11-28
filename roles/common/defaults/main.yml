@@ -6,6 +6,7 @@ common_apt_repos:
   - ppa:webupd8team/terminix
 
 common_apt_packages:
+  - gnome-shell
   - silversearcher-ag
   - paper-icon-theme
   - paper-cursor-theme
