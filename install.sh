@@ -10,6 +10,12 @@ fi
 # Install ansible
 if [ ! -f ~/.local/bin/ansible ]; then
     pip install ansible --user
+    echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+fi
+
+# Update bashrc
+if [ -z $(grep '^export PATH="$PATH:$HOME/.local/bin"$' ~/.bashrc) ]; then
+    echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 fi
 
 # Run playbook

@@ -18,4 +18,7 @@
 - name: Add bash completion script to bashrc
   lineinfile:
     path: "~/.bashrc"
-    line: "source ~/.bazel/bin/bazel-complete.bash"
+    line: "{{ item }}"
+  with_items:
+    - "source ~/.bazel/bin/bazel-complete.bash"
+    - 'export PATH="$PATH:$HOME/bin"'
