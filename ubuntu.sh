@@ -2,8 +2,8 @@
 
 mkdir -p ~/Projects
 
+
 # Set vars
-CURRENT_DIR=${pwd}
 BAZEL_VERSION=0.5.2
 
 # Add PPAs
@@ -37,12 +37,6 @@ wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/baze
 chmod +x bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 ./bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
 wget https://raw.githubusercontent.com/bazelbuild/bazel/master/scripts/bazel-complete-template.bash
-
-git clone git@github.com:bazelbuild/bazel.git ~/Projects/bazel
-cd ~/Projects/bazel
-bazel build //scripts:bash_completion
-cp bazel-bin/scripts/bazel-complete.bash ~/.bazel/bin/
-cd ${CURRENT_DIR}
 
 # Install Silver Searcher
 apt-get install -y silversearcher-ag
