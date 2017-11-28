@@ -6,6 +6,7 @@ common_apt_repos:
   - ppa:webupd8team/terminix
 
 common_apt_packages:
+  - python-dev
   - gir1.2-gtop-2.0
   - gir1.2-networkmanager-1.0
   - gir1.2-clutter-1.0
@@ -17,8 +18,11 @@ common_apt_packages:
   - paper-gtk-theme
   - tilix
 
+common_pip_packages:
+  - psutil
+
 common_slack_version: 2.9.0
-common_slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-amd64.deb"
+common_slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ common_slack_version }}-amd64.deb"
 
 common_chrome_download_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
