@@ -33,6 +33,15 @@
     extra_args: --user
   with_items: "{{ common_pip_packages }}"
 
+- name: Add virtualenvwrapper settings to bashrc
+  lineinfile:
+    path: "~/.bashrc"
+    line: "{{ item }}"
+  with_items:
+    - "export WORKON_HOME=$HOME/.virtualenvs"
+    - "export PROJECT_HOME=$HOME/Projects"
+    - "source ~/.local/bin/virtualenvwrapper.sh"
+
 - name: Make tilix the default terminal
   alternatives:
     name: x-terminal-emulator

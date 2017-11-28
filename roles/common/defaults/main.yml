@@ -33,6 +33,7 @@ common_apt_packages:
 
 common_pip_packages:
   - psutil
+  - virtualenvwrapper
 
 common_slack_version: 2.9.0
 common_slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ common_slack_version }}-amd64.deb"
