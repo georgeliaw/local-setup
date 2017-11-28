@@ -31,6 +31,8 @@ sudo apt-get install -y oracle-java8-installer
 
 # Install Gnome3 Desktop
 sudo apt-get install -y gnome-shell
+# move window controls to the right side (default is 'close,minimize,maximize:')
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
 
 # Install Tilix
 sudo apt-get install -y tilix
