@@ -7,6 +7,14 @@
   become: yes
   with_items: "{{ common_apt_repos }}"
 
+- name: Remove unwanted apt packages
+  apt:
+    name: "{{ item }}"
+    purge: yes
+    state: absent
+  become: yes
+  with_items: "{{ common_remove_apt_packages }}"
+
 - name: Install apt packages
   apt:
     name: "{{ item }}"
