@@ -29,16 +29,14 @@
         - { path: '~/.nanorc', line: 'set tabsize 4' }
         - { path: '~/.nanorc', line: 'set tabstospaces' }
 
-    - name: Set favorites
-      dconf:
-        key: /org/gnome/shell/favorite-apps
-        value: >
-          "[
-              'google-chrome.desktop',
-              'firefox.desktop',
-              'com.gexperts.Tilix.desktop',
-              'org.gnome.Nautilus.desktop',
-              'slack.desktop',
-              'jetbrains-pycharm-ce.desktop'
-           ]"
-        state: present
+    - name: Set favorite apps
+      shell: >
+        dconf write /org/gnome/shell/favorite-apps
+        "[
+            'google-chrome.desktop',
+            'firefox.desktop',
+            'com.gexperts.Tilix.desktop',
+            'org.gnome.Nautilus.desktop',
+            'slack.desktop',
+            'jetbrains-pycharm-ce.desktop'
+         ]"
