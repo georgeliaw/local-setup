@@ -1,0 +1,6 @@
+---
+# tasks file for slack
+
+- name: Install Slack deb package
+  apt:
+    deb: "{{ slack_download_url }}"

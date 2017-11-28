@@ -18,6 +18,10 @@
       include_role:
         name: tilix
 
+    - name: Install Slack
+      include_role:
+        name: slack
+
     - name: Set favorites
       dconf:
         key: /org/gnome/shell/favorite-apps
