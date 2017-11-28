@@ -2,7 +2,7 @@ First, run `install.sh`.
 
 Then we can do the following:
 
-1. Install (Gnome) Tweak Tools from the Software Updater and install the following extensions:
+1. Open (Gnome) Tweak Tools and install the following extensions:
 - Battery Status
 - Dash to Dock
 - Dash to Panel or TaskBar
