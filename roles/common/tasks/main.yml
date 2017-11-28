@@ -25,6 +25,13 @@
     extra_args: --user
   with_items: "{{ common_pip_packages }}"
 
+- name: Make tilix the default terminal
+  alternatives:
+    name: x-terminal-emulator
+    path: /usr/bin/tilix
+    priority: 30
+  become: yes
+
 - name: Download fuzzy finder
   git:
     repo: https://github.com/junegunn/fzf.git

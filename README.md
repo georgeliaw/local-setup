@@ -1,4 +1,4 @@
-First, run `ubuntu.sh`.
+First, run `install.sh`.
 
 Then we can do the following:
 
@@ -12,10 +12,3 @@ Then we can do the following:
 - User Themes
 - No Top Left Hot Corner
 Then go to `Typing` > `Caps Lock key behavior` > `Make Caps Lock and additional Super`
-
-2. To set Tilix as default terminal:
-`sudo update-alternatives --config x-terminal-emulator`
-Then pick Tilix from the menu.
-
-TODO:
-- switch all this to ansible
