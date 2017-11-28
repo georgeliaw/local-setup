@@ -44,3 +44,9 @@
 # move window controls to the right side (default is 'close,minimize,maximize:')
 - name: Move window controls to the right side
   shell: "gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'"
+
+- name: Set gitconfig
+  copy:
+    src: gitconfig
+    dest: "~/.gitconfig"
+    mode: 0664
