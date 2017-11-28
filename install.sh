@@ -14,3 +14,5 @@ fi
 
 # Run playbook
 ansible-playbook setup.yml --ask-become-pass
+
+source ~/.bashrc

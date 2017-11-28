@@ -1,0 +1,21 @@
+---
+# tasks file for bazel
+
+- name: Install Bazel dependencies
+  apt:
+    name: "{{ item }}"
+  with_items: "{{ bazel_apt_dependencies }}"
+
+- name: Download Bazel
+  get_url:
+    src: "{{ bazel_download_url }}"
+    dest: "~/Downloads/{{ bazel_install_script }}"
+    mode: 0755
+
+- name: Install Bazel
+  shell: "~/Downloads/{{ bazel_install_script }} --user"
+
+- name: Add bash completion script to bashrc
+  lineinfile:
+    path: "~/.bashrc"
+    line: "source ~/.bazel/bin/bazel-complete.bash"

@@ -10,6 +10,10 @@
       include_role:
         name: java
 
+    - name: Install Bazel
+      include_role:
+        name: bazel
+
     - name: Install PyCharm
       include_role:
         name: pycharm
