@@ -18,6 +18,17 @@
       include_role:
         name: pycharm
 
+    - name: Set editor settings
+      lineinfile:
+        path: "{{ item.path }}"
+        line: "{{ item.line }}"
+        create: yes
+        backup: yes
+      with_items:
+        - { path: '~/.bashrc', line: 'export EDITOR=nano' }
+        - { path: '~/.nanorc', line: 'set tabsize 4' }
+        - { path: '~/.nanorc', line: 'set tabstospaces' }
+
     - name: Set favorites
       dconf:
         key: /org/gnome/shell/favorite-apps
