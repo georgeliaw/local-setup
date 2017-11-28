@@ -14,6 +14,10 @@
       include_role:
         name: pycharm
 
+    - name: Install Tilix
+      include_role:
+        name: tilix
+
     - name: Set favorites
       dconf:
         key: /org/gnome/shell/favorite-apps
