@@ -36,7 +36,6 @@ cd ~/Downloads
 wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 chmod +x bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 ./bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
-wget https://raw.githubusercontent.com/bazelbuild/bazel/master/scripts/bazel-complete-template.bash
 
 # Install Silver Searcher
 apt-get install -y silversearcher-ag
