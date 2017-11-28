@@ -7,12 +7,14 @@ mkdir -p ~/Projects
 BAZEL_VERSION=0.5.2
 
 # Add PPAs
+sudo apt-add-repository -y ppa:ansible/ansible
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:webupd8team/terminix
 sudo add-apt-repository -y ppa:snwh/pulp
 sudo apt-get update
 
 # Install base packages
+sudo apt-get install -y ansible
 sudo apt-get install -y pkg-config zip g++ zlib1g-dev unzip
 sudo apt-get install -y gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 gir1.2-clutter-1.0
 
