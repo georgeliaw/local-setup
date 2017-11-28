@@ -6,6 +6,7 @@ Then we can do the following:
 - Battery Status
 - Dash to Dock
 - TaskBar
+Then go to `Typing` > `Caps Lock key behavior` > `Make Caps Lock and additional Super`
 
 2. To set Tilix as default terminal:
 `sudo update-alternatives --config x-terminal-emulator`
