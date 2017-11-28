@@ -14,9 +14,16 @@ sudo add-apt-repository -y ppa:snwh/pulp
 sudo apt-get update
 
 # Install base packages
-sudo apt-get install -y ansible
 sudo apt-get install -y pkg-config zip g++ zlib1g-dev unzip
 sudo apt-get install -y gir1.2-gtop-2.0 gir1.2-networkmanager-1.0 gir1.2-clutter-1.0
+
+# Install pip
+cd ~/Downloads
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+
+# Install ansible
+pip install ansible --user
 
 # Install Java 8
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
@@ -40,6 +47,10 @@ chmod +x bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 ./bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh --user
 sudo cp ~/.bazel/bin/bazel-complete.bash /etc/bash_completion.d/
 
+# Install PyCharm
+wget 'https://download.jetbrains.com/python/pycharm-community-2017.2.4.tar.gz'
+tar xvzf pycharm-community-2017.2.4.tar.gz -C ~
+
 # Install Silver Searcher
 sudo apt-get install -y silversearcher-ag
 
@@ -48,6 +59,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # Update bashrc
+echo 'export EDITOR=nano' >> ~/.bashrc
 echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
+
+# Update nanorc
+echo 'set tabsize 4' >> ~/.nanorc
+echo 'set tabstospaces' >> ~/.nanorc
 
 source ~/.bashrc
