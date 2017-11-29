@@ -4,6 +4,7 @@
 common_apt_repos:
   - ppa:snwh/pulp
   - ppa:webupd8team/terminix
+  - ppa:nathan-renniewaldock/flux
 
 common_remove_apt_packages:
   - lightdm
@@ -15,13 +16,14 @@ common_apt_packages:
   - gir1.2-networkmanager-1.0
   - gir1.2-clutter-1.0
 
-  # gnome3
+  # desktop
   - gnome-shell
   - gdm3
   - gnome-tweak-tool
   - paper-icon-theme
   - paper-cursor-theme
   - paper-gtk-theme
+  - fluxgui
 
   # tools
   - silversearcher-ag
