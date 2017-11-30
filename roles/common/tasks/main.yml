@@ -67,3 +67,9 @@
     src: gitconfig
     dest: "~/.gitconfig"
     mode: 0664
+
+- name: Set ssh config
+  copy:
+    src: ssh_config
+    dest: "~/.ssh/config"
+    mode: 0664
