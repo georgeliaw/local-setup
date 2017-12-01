@@ -11,7 +11,7 @@ fi
 # Install ansible
 if [[ ! -f ~/.local/bin/ansible ]]; then
     pip install ansible --user
-    echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+    export PATH="$PATH:$HOME/.local/bin"
 fi
 
 # Update bashrc
