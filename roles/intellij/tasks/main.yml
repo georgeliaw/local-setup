@@ -1,0 +1,32 @@
+---
+# tasks file for intellij
+
+- name: Create IntelliJ install directory
+  file:
+    path: "{{ intellij_install_dir }}"
+    state: directory
+
+- name: Download and extract IntelliJ
+  unarchive:
+    src: "{{ intellij_download_url }}"
+    dest: "{{ intellij_install_dir }}"
+    extra_opts: "--strip-components=1"
+    remote_src: yes
+
+- name: Download and extract plugins
+  unarchive:
+    src: "{{ intellij_plugin_download_mirror }}{{ item }}"
+    dest: "{{ intellij_install_dir }}/plugins"
+    remote_src: yes
+  with_items: "{{ intellij_plugins }}"
+
+- name: Update IntelliJ symlink
+  file:
+    src: "{{ intellij_install_dir }}"
+    dest: "~/intellij"
+    state: link
+
+- name: Add IntelliJ to desktop
+  template:
+    src: intellij.desktop
+    dest: "~/.local/share/applications/jetbrains-idea-ce.desktop"

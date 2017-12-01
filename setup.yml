@@ -18,6 +18,10 @@
       include_role:
         name: pycharm
 
+    - name: Install IntelliJ IDEA
+      include_role:
+        name: intellij
+
     - name: Set editor settings
       lineinfile:
         path: "{{ item.path }}"
@@ -38,5 +42,6 @@
             'com.gexperts.Tilix.desktop',
             'org.gnome.Nautilus.desktop',
             'slack.desktop',
-            'jetbrains-pycharm-ce.desktop'
+            'jetbrains-pycharm-ce.desktop',
+            'jetbrains-idea-ce.desktop'
          ]"
