@@ -17,7 +17,7 @@
 - name: Update PyCharm symlink
   file:
     src: "{{ pycharm_install_dir }}"
-    dest: "~/pycharm"
+    dest: "{{ pycharm_install_dir_symlink }}"
     state: link
 
 - name: Add PyCharm to desktop

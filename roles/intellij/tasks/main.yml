@@ -23,7 +23,7 @@
 - name: Update IntelliJ symlink
   file:
     src: "{{ intellij_install_dir }}"
-    dest: "~/intellij"
+    dest: "{{ intellij_install_dir_symlink }}"
     state: link
 
 - name: Add IntelliJ to desktop

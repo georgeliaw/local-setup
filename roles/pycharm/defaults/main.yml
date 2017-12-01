@@ -8,6 +8,7 @@ pycharm_edition: community
 pycharm_download_url: "{{ pycharm_download_mirror }}/pycharm-{{ pycharm_edition }}-{{ pycharm_version }}.tar.gz"
 
 pycharm_install_dir: "~/pycharm-{{ pycharm_edition }}-{{ pycharm_version }}"
+pycharm_install_dir_symlink: "~/pycharm"
 
 pycharm_plugin_download_mirror: "https://plugins.jetbrains.com/plugin/download?updateId="
 pycharm_plugins:

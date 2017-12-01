@@ -2,8 +2,8 @@
 Version=1.0
 Type=Application
 Name=PyCharm {{ pycharm_edition.title() }} Edition
-Icon={{ pycharm_install_dir|expanduser }}/bin/pycharm.png
-Exec="{{ pycharm_install_dir|expanduser }}/bin/pycharm.sh" %f
+Icon={{ pycharm_install_dir_symlink|expanduser }}/bin/pycharm.png
+Exec="{{ pycharm_install_dir_symlink|expanduser }}/bin/pycharm.sh" %f
 Comment=The Drive to Develop
 Categories=Development;IDE;
 Terminal=false
