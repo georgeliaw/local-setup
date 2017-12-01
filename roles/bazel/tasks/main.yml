@@ -21,4 +21,4 @@
     line: "{{ item }}"
   with_items:
     - "source ~/.bazel/bin/bazel-complete.bash"
-    - 'export PATH="$PATH:$HOME/bin"'
+    - 'export PATH="$PATH:$HOME/.bazel/bin"'
