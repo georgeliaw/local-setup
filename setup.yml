@@ -14,6 +14,10 @@
       include_role:
         name: bazel
 
+    - name: Install Docker
+      include_role:
+        name: docker
+
     - name: Install PyCharm
       include_role:
         name: pycharm
