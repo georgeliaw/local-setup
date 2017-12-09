@@ -73,3 +73,14 @@
     src: ssh_config
     dest: "~/.ssh/config"
     mode: 0664
+
+- name: Add pip config directory
+  file:
+    path: "~/.config/pip"
+    state: directory
+
+- name: Set pip config
+  copy:
+    src: pip.conf
+    dest: "~/.config/pip/pip.conf"
+    mode: 0664
