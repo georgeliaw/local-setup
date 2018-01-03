@@ -33,6 +33,7 @@ common_apt_packages:
   - htop
   - iotop
   - iftop
+  - zsh
 
 common_pip_packages:
   - psutil
