@@ -16,6 +16,7 @@ common_apt_packages:
   - gir1.2-networkmanager-1.0
   - gir1.2-clutter-1.0
   - maven
+  - libatlas3-base
 
   # desktop
   - gnome-shell
