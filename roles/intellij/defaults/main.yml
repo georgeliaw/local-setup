@@ -12,4 +12,4 @@ intellij_install_dir_symlink: "~/intellij"
 
 intellij_plugin_download_mirror: "https://plugins.jetbrains.com/plugin/download?updateId="
 intellij_plugins:
-  - 40896   # Material Theme 1.3.4
+  - 44635   # Material Theme
