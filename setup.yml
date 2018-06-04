@@ -6,6 +6,10 @@
       include_role:
         name: common
 
+    - name: Install customization packages
+      include_role:
+        name: customization
+
     - name: Install Java
       include_role:
         name: java
