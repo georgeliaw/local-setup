@@ -1,7 +1,0 @@
-[user]
-	email = george.a.liaw@gmail.com
-	name = George Liaw
-[core]
-	editor = nano
-[push]
-	default = simple

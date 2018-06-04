@@ -1,20 +1,6 @@
 ---
 # tasks file for common
 
-- name: Add apt repositories
-  apt_repository:
-    repo: "{{ item }}"
-  become: yes
-  with_items: "{{ common_apt_repos }}"
-
-- name: Remove unwanted apt packages
-  apt:
-    name: "{{ item }}"
-    purge: yes
-    state: absent
-  become: yes
-  with_items: "{{ common_remove_apt_packages }}"
-
 - name: Install apt packages
   apt:
     name: "{{ item }}"
@@ -33,47 +19,6 @@
     extra_args: --user
   with_items: "{{ common_pip_packages }}"
 
-- name: Add virtualenvwrapper settings to bashrc
-  lineinfile:
-    path: "~/.bashrc"
-    line: "{{ item }}"
-  with_items:
-    - "export WORKON_HOME=$HOME/.virtualenvs"
-    - "export PROJECT_HOME=$HOME/Projects"
-    - "source ~/.local/bin/virtualenvwrapper.sh"
-
-- name: Make tilix the default terminal
-  alternatives:
-    name: x-terminal-emulator
-    path: /usr/bin/tilix
-    priority: 30
-  become: yes
-
-- name: Download fuzzy finder
-  git:
-    repo: https://github.com/junegunn/fzf.git
-    dest: "~/.fzf"
-    depth: 1
-
-- name: Install fuzzy finder
-  shell: "~/.fzf/install --all"
-
-# move window controls to the right side (default is 'close,minimize,maximize:')
-- name: Move window controls to the right side
-  shell: "gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'"
-
-- name: Set gitconfig
-  copy:
-    src: gitconfig
-    dest: "~/.gitconfig"
-    mode: 0664
-
-- name: Set ssh config
-  copy:
-    src: ssh_config
-    dest: "~/.ssh/config"
-    mode: 0664
-
 - name: Add pip config directory
   file:
     path: "~/.config/pip"
@@ -84,3 +29,21 @@
     src: pip.conf
     dest: "~/.config/pip/pip.conf"
     mode: 0664
+
+- name: Add virtualenvwrapper settings to bashrc
+  lineinfile:
+    path: "~/.bashrc"
+    line: "{{ item }}"
+  with_items:
+    - "export WORKON_HOME=$HOME/.virtualenvs"
+    - "export PROJECT_HOME=$HOME/Projects"
+    - "source ~/.local/bin/virtualenvwrapper.sh"
+
+- name: Download fuzzy finder
+  git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: "~/.fzf"
+    depth: 1
+
+- name: Install fuzzy finder
+  shell: "~/.fzf/install --all"
