@@ -2,7 +2,6 @@
 # defaults file for common
 
 common_apt_repos:
-  - ppa:snwh/pulp
   - ppa:webupd8team/terminix
   - ppa:nathan-renniewaldock/flux
 

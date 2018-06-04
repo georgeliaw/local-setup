@@ -1,5 +1,8 @@
 ---
 # defaults file for common
+common_apt_repos:
+  - ppa:snwh/pulp
+
 common_apt_packages:
   # system
   - python-dev

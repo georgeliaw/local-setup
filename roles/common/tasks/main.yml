@@ -1,6 +1,12 @@
 ---
 # tasks file for common
 
+- name: Add apt repositories
+  apt_repository:
+    repo: "{{ item }}"
+  become: yes
+  with_items: "{{ common_apt_repos }}"
+
 - name: Install apt packages
   apt:
     name: "{{ item }}"
