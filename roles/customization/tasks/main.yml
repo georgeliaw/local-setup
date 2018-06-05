@@ -1,0 +1,52 @@
+---
+# tasks file for common
+
+- name: Add apt repositories
+  apt_repository:
+    repo: "{{ item }}"
+  become: yes
+  with_items: "{{ common_apt_repos }}"
+
+- name: Remove unwanted apt packages
+  apt:
+    name: "{{ item }}"
+    purge: yes
+    state: absent
+  become: yes
+  with_items: "{{ common_remove_apt_packages }}"
+
+- name: Install apt packages
+  apt:
+    name: "{{ item }}"
+  become: yes
+  with_items: "{{ common_apt_packages }}"
+
+- name: Install deb packages
+  apt:
+    deb: "{{ item }}"
+  become: yes
+  with_items: "{{ common_deb_packages }}"
+
+- name: Make tilix the default terminal
+  alternatives:
+    name: x-terminal-emulator
+    path: /usr/bin/tilix
+    priority: 30
+  become: yes
+
+# move window controls to the right side (default is 'close,minimize,maximize:')
+- name: Move window controls to the right side
+  shell: "gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'"
+
+- name: Set gitconfig
+  copy:
+    src: gitconfig
+    dest: "~/.gitconfig"
+    mode: 0664
+
+- name: Set ssh config
+  copy:
+    src: ssh_config
+    dest: "~/.ssh/config"
+    mode: 0664
+

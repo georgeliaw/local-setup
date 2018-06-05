@@ -1,0 +1,22 @@
+---
+# defaults file for common
+
+common_apt_repos:
+  - ppa:webupd8team/terminix
+  - ppa:nathan-renniewaldock/flux
+
+common_remove_apt_packages:
+  - lightdm
+
+common_apt_packages:
+  # desktop
+  - gnome-shell
+  - gdm3
+  - gnome-tweak-tool
+  - paper-icon-theme
+  - paper-cursor-theme
+  - paper-gtk-theme
+  - fluxgui
+
+  # tools
+  - tilix

@@ -1,10 +1,22 @@
 ---
 
 - hosts: localhost
+
+  vars_prompt:
+    - name: "check_mode"
+      prompt: "Install george customixations: yes(default)=install all sort of stuff, no=you will need to install your .gitconfig and ssh config"
+      private: no
+      default: true
+
   tasks:
     - name: Install common packages
       include_role:
         name: common
+
+    - name: Install customization packages
+      include_role:
+        name: customization
+      when: check_mode|bool
 
     - name: Install Java
       include_role:
