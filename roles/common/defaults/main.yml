@@ -24,7 +24,7 @@ common_pip_packages:
   - psutil
   - virtualenvwrapper
 
-common_slack_version: 2.9.0
+common_slack_version: 3.2.1
 common_slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ common_slack_version }}-amd64.deb"
 
 common_chrome_download_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
