@@ -16,6 +16,7 @@ common_apt_packages:
   - paper-icon-theme
   - fluxgui
   - kubuntu-desktop
+  - latte-dock
 
   # tools
   - tilix
