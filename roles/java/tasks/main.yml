@@ -1,6 +1,0 @@
----
-# tasks file for java
-
-- include_tasks: ubuntu.yml
-  become: yes
-  when: ansible_distribution == 'Ubuntu'
