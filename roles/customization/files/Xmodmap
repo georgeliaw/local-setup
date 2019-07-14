@@ -1,0 +1,2 @@
+! remap CapsLock to F22 so we can use it as a custom hotkey (e.g. Present Windows in KDE)
+keycode 66 = F22

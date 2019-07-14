@@ -50,3 +50,11 @@
     dest: "~/.ssh/config"
     mode: 0664
 
+- name: Add custom Xmodmap
+  copy:
+    src: Xmodmap
+    dest: "~/.Xmodmap"
+    mode: 0664
+
+- name: Set Xmodmap
+  shell: "xmodmap ~/.Xmodmap"
