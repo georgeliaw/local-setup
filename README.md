@@ -8,6 +8,11 @@ Simply run `install.sh` and follow any prompts that come up.
 
 NOTE: Below notes about Gnome are being deprecated as I'm switching to KDE
 
+### Adding KDE Extensions
+
+- Event Calendar
+- Tela Icon Theme
+
 ### Adding Gnome Extensions (deprecated)
 
 This will get you some of the extensions that I prefer to use.
