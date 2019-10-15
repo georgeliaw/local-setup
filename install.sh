@@ -1,11 +1,16 @@
 #!/bin/bash
 set -ex
 
+# Install Python3.7
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt-get update
+sudo apt-get install python3.7 -y
+
 # Install Pip
 if [[ ! -f /usr/local/bin/pip ]]; then
     cd ~/Downloads
     wget https://bootstrap.pypa.io/get-pip.py
-    sudo python get-pip.py
+    sudo python3.7 get-pip.py
 fi
 
 # Install ansible
