@@ -8,10 +8,35 @@ Simply run `install.sh` and follow any prompts that come up.
 
 NOTE: Below notes about Gnome are being deprecated as I'm switching to KDE
 
-### Adding KDE Extensions
+### KDE Setup
 
+Theming:
+- Paper Icons/Cursors
+- Dark/Material
+
+Extensions:
 - Event Calendar
-- Tela Icon Theme
+
+Tilix:
+- Set `Synchronize the input` to `Ctrl+Alt+Shift+S`
+- Set Default profile terminal size to 215x60
+- Set Default profile command to `Run command as a login shell`
+
+Input Devices:
+- Keyboard -> Advanced -> Caps Lock is disabled
+
+Window Management:
+- Task Switcher -> Visualization -> Grid
+
+Shortcuts:
+- Global Shortcuts -> Plasma:
+    - Remove KDE shortcut `Manually Invoke Action on Current Clipboard` (conflicts with Tilix's `Add terminal right`)
+- Custom Shortcuts -> Screenshots:
+    - Take Full Screenshot: PrintScrn
+    - Take Rectangular Screenshot: Shift+PrintScrn
+
+Desktop Behavior:
+- Desktop Effects -> Present Windows -> Toggle Present Windows (Current desktop) -> CapsLock/F22 (this works because we modified Xmodmap)
 
 ### Adding Gnome Extensions (deprecated)
 
