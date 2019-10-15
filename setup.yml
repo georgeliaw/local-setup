@@ -3,7 +3,7 @@
 - hosts: localhost
 
   vars_prompt:
-    - name: "check_mode"
+    - name: "check_install_mode"
       prompt: "Install customizations: yes(default)=install all sort of stuff, no=you will need to install your .gitconfig and ssh config"
       private: no
       default: true
@@ -16,7 +16,7 @@
     - name: Install customization packages
       include_role:
         name: customization
-      when: check_mode|bool
+      when: check_install_mode|bool
 
     - name: Install Bazel
       include_role:
