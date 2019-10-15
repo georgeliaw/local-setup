@@ -5,7 +5,7 @@
   apt_repository:
     repo: "{{ item }}"
   become: yes
-  with_items: "{{ common_apt_repos }}"
+  with_items: "{{ custom_apt_repos }}"
 
 - name: Remove unwanted apt packages
   apt:
@@ -13,19 +13,19 @@
     purge: yes
     state: absent
   become: yes
-  with_items: "{{ common_remove_apt_packages }}"
+  with_items: "{{ custom_remove_apt_packages }}"
 
 - name: Install apt packages
   apt:
     name: "{{ item }}"
   become: yes
-  with_items: "{{ common_apt_packages }}"
+  with_items: "{{ custom_apt_packages }}"
 
 - name: Install deb packages
   apt:
     deb: "{{ item }}"
   become: yes
-  with_items: "{{ common_deb_packages }}"
+  with_items: "{{ custom_deb_packages }}"
 
 - name: Make tilix the default terminal
   alternatives:

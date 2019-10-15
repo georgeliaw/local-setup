@@ -1,14 +1,14 @@
 ---
 # defaults file for common
 
-common_apt_repos:
+custom_apt_repos:
   - ppa:snwh/ppa
   - ppa:nathan-renniewaldock/flux
 
-common_remove_apt_packages:
+custom_remove_apt_packages:
   - lightdm
 
-common_apt_packages:
+custom_apt_packages:
   # desktop
   - gnome-shell
   - gdm3
@@ -20,3 +20,5 @@ common_apt_packages:
 
   # tools
   - tilix
+
+custom_deb_packages: []
