@@ -38,6 +38,11 @@ Shortcuts:
 Desktop Behavior:
 - Desktop Effects -> Present Windows -> Toggle Present Windows (Current desktop) -> CapsLock/F22 (this works because we modified Xmodmap)
 
+Applications:
+- Default Applications:
+    - Terminal Emulator: tilix
+    - Web Browser: Chrome
+
 ### Adding Gnome Extensions (deprecated)
 
 This will get you some of the extensions that I prefer to use.
