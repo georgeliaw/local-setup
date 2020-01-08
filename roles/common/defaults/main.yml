@@ -12,6 +12,8 @@ common_apt_packages:
   - openjdk-8-jdk
   - maven
   - libatlas3-base
+  - libpq-dev
+  - libsasl-dev
 
   # tools
   - silversearcher-ag
