@@ -22,6 +22,7 @@ common_apt_packages:
   - iotop
   - iftop
   - zsh
+  - redesktop
 
 common_pip_packages:
   - psutil
