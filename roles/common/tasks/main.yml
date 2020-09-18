@@ -1,5 +1,11 @@
 ---
 # tasks file for common
+- name: Add apt keys
+  apt_key:
+    keyserver: "{{ item.keyserver }}"
+    id: "{{ item.id }}"
+  become: yes
+  with_items: "{{ common_apt_keys }}"
 
 - name: Add apt repositories
   apt_repository:
