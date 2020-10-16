@@ -26,9 +26,8 @@
 
 - name: Install pip packages
   pip:
-    name: "{{ item }}"
+    name: "{{ common_pip_packages }}"
     extra_args: --user
-  with_items: "{{ common_pip_packages }}"
 
 - name: Add pip config directory
   file:

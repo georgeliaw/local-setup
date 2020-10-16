@@ -5,13 +5,14 @@ REPO_DIR=$PWD
 # Install Python3.7
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt-get update
-sudo apt-get install python2.7 python3.7 -y
+sudo apt-get install python2.7 python2.7-dev python3.7 python3.7-dev python3-dev -y
 sudo apt-get install python3-distutils -y
 
 # Update bashrc
 if [[ -z $(grep '^export PATH="$PATH:$HOME/.local/bin"$' ~/.bashrc) ]]; then
     echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 fi
+source ~/.bashrc
 
 # Install Pip
 if [[ ! -f /usr/local/bin/pip3 ]]; then
