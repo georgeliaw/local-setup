@@ -10,9 +10,6 @@ custom_remove_apt_packages:
 
 custom_apt_packages:
   # desktop
-  - gnome-shell
-  - gdm3
-  - gnome-tweak-tool
   - paper-icon-theme
   - fluxgui
   - kubuntu-desktop
