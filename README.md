@@ -36,13 +36,12 @@ Shortcuts:
     - Capture Rectangular Region: Shift+PrintScrn
 - Global Shortcuts -> System Settings:
     - Konsole: None
+- Global Shortcuts -> KWin:
+    -> Toggle Present Windows (Current desktop) -> CapsLock/F22 (this works because we modified Xmodmap)
 - Custom Shortcuts:
     - Create `Custom` group -> New -> Global Shortcut -> Command/URL
         - Trigger: Ctrl+Alt+T
         - Action: /usr/bin/tilix
-
-Workspace Behavior:
-- Desktop Effects -> Present Windows -> Toggle Present Windows (Current desktop) -> CapsLock/F22 (this works because we modified Xmodmap)
 
 Applications:
 - Default Applications:
