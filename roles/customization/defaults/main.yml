@@ -11,7 +11,6 @@ custom_remove_apt_packages:
 custom_apt_packages:
   # desktop
   - paper-icon-theme
-  - fluxgui
   - kubuntu-desktop
   - latte-dock
 
