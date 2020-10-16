@@ -11,14 +11,14 @@ common_apt_packages:
   # system
   - python-dev
   - python3.7-dev
-  - gir1.2-gtop-2.0
-  - gir1.2-networkmanager-1.0
-  - gir1.2-clutter-1.0
+  #- gir1.2-gtop-2.0
+  #- gir1.2-networkmanager-1.0
+  #- gir1.2-clutter-1.0
   - openjdk-8-jdk
   - maven
   - libatlas3-base
   - libpq-dev
-  - libsasl-dev
+  - libsasl2-dev
 
   # tools
   - silversearcher-ag
@@ -27,7 +27,7 @@ common_apt_packages:
   - iotop
   - iftop
   - zsh
-  - redesktop
+  - rdesktop
   - gh  # github cli
 
 common_pip_packages:
