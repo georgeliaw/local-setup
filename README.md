@@ -2,7 +2,7 @@
 
 This repo is used to configure a fresh local desktop environment to my preferences.
 
-Currently setup for Ubuntu 16.04, migrating to Ubuntu 18.04.
+Currently setup for Ubuntu 20.04.
 
 Simply run `install.sh` and follow any prompts that come up.
 
@@ -31,11 +31,11 @@ Window Management:
 Shortcuts:
 - Global Shortcuts -> Plasma:
     - Remove KDE shortcut `Manually Invoke Action on Current Clipboard` (conflicts with Tilix's `Add terminal right`)
-- Custom Shortcuts -> Screenshots:
-    - Take Full Screenshot: PrintScrn
-    - Take Rectangular Screenshot: Shift+PrintScrn
+- Global Shortcuts -> Spectacle:
+    - Capture Entire Desktop: PrintScrn
+    - Capture Rectangular Region: Shift+PrintScrn
 
-Desktop Behavior:
+Workspace Behavior:
 - Desktop Effects -> Present Windows -> Toggle Present Windows (Current desktop) -> CapsLock/F22 (this works because we modified Xmodmap)
 
 Applications:
