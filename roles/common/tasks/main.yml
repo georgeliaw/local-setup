@@ -15,9 +15,8 @@
 
 - name: Install apt packages
   apt:
-    name: "{{ item }}"
+    name: "{{ common_apt_packages }}"
   become: yes
-  with_items: "{{ common_apt_packages }}"
 
 - name: Install deb packages
   apt:
