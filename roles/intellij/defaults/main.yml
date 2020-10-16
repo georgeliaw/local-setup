@@ -11,5 +11,4 @@ intellij_install_dir: "~/intellij-{{ intellij_version }}"
 intellij_install_dir_symlink: "~/intellij"
 
 intellij_plugin_download_mirror: "https://plugins.jetbrains.com/plugin/download?updateId="
-intellij_plugins:
-  - 44635   # Material Theme
+intellij_plugins: []
