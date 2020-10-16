@@ -3,7 +3,6 @@
 
 custom_apt_repos:
   - ppa:snwh/ppa
-  - ppa:nathan-renniewaldock/flux
 
 custom_remove_apt_packages:
   - lightdm
