@@ -5,7 +5,7 @@ common_apt_keys:
     id: C99B11DEB97541F0  # github cli
 
 common_apt_repos:
-  - https://cli.github.com/packages
+  - "deb https://cli.github.com/packages {{ ansible_distribution_release }} main"
 
 common_apt_packages:
   # system

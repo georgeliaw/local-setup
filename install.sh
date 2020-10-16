@@ -6,24 +6,27 @@ REPO_DIR=$PWD
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt-get update
 sudo apt-get install python2.7 python3.7 -y
+sudo apt-get install python3-distutils -y
+
+# Update bashrc
+if [[ -z $(grep '^export PATH="$PATH:$HOME/.local/bin"$' ~/.bashrc) ]]; then
+    echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+fi
 
 # Install Pip
-if [[ ! -f /usr/local/bin/pip ]]; then
+if [[ ! -f /usr/local/bin/pip3 ]]; then
     cd ~/Downloads
-    wget https://bootstrap.pypa.io/get-pip.py
-    sudo python get-pip.py
+    if [[ ! -f ~/Downloads/get-pip.py ]]; then
+        wget https://bootstrap.pypa.io/get-pip.py
+    fi
+    python3 get-pip.py --user
     cd $REPO_DIR
 fi
 
 # Install ansible
 if [[ ! -f ~/.local/bin/ansible ]]; then
-    pip install ansible --user
+    ~/.local/bin/pip3 install ansible --user
     export PATH="$PATH:$HOME/.local/bin"
-fi
-
-# Update bashrc
-if [[ -z $(grep '^export PATH="$PATH:$HOME/.local/bin"$' ~/.bashrc) ]]; then
-    echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 fi
 
 # Run playbook
