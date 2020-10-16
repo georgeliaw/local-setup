@@ -3,9 +3,8 @@
 
 - name: Install Bazel dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ bazel_apt_dependencies }}"
   become: yes
-  with_items: "{{ bazel_apt_dependencies }}"
 
 - name: Download Bazel
   get_url:

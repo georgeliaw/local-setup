@@ -13,8 +13,7 @@
 
 - name: Install apt packages
   apt:
-    name: "{{ item }}"
-  with_items: "{{ docker_apt_packages }}"
+    name: "{{ docker_apt_packages }}"
   become: yes
 
 - name: Add user to docker group

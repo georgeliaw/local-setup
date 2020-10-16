@@ -9,17 +9,15 @@
 
 - name: Remove unwanted apt packages
   apt:
-    name: "{{ item }}"
+    name: "{{ custom_remove_apt_packages }}"
     purge: yes
     state: absent
   become: yes
-  with_items: "{{ custom_remove_apt_packages }}"
 
 - name: Install apt packages
   apt:
-    name: "{{ item }}"
+    name: "{{ custom_apt_packages }}"
   become: yes
-  with_items: "{{ custom_apt_packages }}"
 
 - name: Install deb packages
   apt:
