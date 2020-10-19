@@ -17,3 +17,5 @@ custom_apt_packages:
   - tilix
 
 custom_deb_packages: []
+
+custom_swap_file_path: /swapfile
