@@ -59,7 +59,7 @@
 
 - name: Setup swap file
   command: "dd if=/dev/zero of={{ custom_swap_file_path }} bs=1024 count={{ ansible_memtotal_mb }}"
-  creates: "{{ custom_swap_file_path }}"
+    creates: "{{ custom_swap_file_path }}"
   become: yes
 
 - name: Set swap file permissions
