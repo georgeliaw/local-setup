@@ -62,6 +62,7 @@
   args:
     creates: "{{ custom_swap_file_path }}"
   become: yes
+  register: swap_file_creation
 
 - name: Set swap file permissions
   file:
@@ -74,10 +75,12 @@
 - name: Format swap file
   command: "mkswap {{ custom_swap_file_path }}"
   become: yes
+  when: swap_file_creation.rc == 0 and 'skipped' not in swap_file_creation.stdout
 
 - name: Add swap file to the system
   command: "swapon {{ custom_swap_file_path }}"
   become: yes
+  when: swap_file_creation.rc == 0 and 'skipped' not in swap_file_creation.stdout
 
 - name: Add swap mount to fstab
   mount:
