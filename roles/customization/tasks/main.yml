@@ -81,7 +81,8 @@
 
 - name: Add swap mount to fstab
   mount:
-    path: "{{ custom_swap_file_path }}"
+    path: none
+    src: "{{ custom_swap_file_path }}"
     fstype: swap
     opts: sw
     passno: 0
