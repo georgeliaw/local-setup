@@ -6,14 +6,18 @@
     name: "{{ bazel_apt_dependencies }}"
   become: yes
 
-- name: Download Bazel
-  get_url:
-    url: "{{ bazel_download_url }}"
-    dest: "~/Downloads/{{ bazel_install_script }}"
-    mode: 0755
+- name: Add ubuntu toolchain test repo
+  become: yes
+  apt_repository:
+    repo: 'ppa:ubuntu-toolchain-r/test'
 
-- name: Install Bazel
-  shell: "~/Downloads/{{ bazel_install_script }} --user"
+- name: Install bazelisk
+  become: yes
+  get_url:
+    url: "{{ bazelisk_download_url }}"
+    checksum: sha256:98af93c6781156ff3dd36fa06ba6b6c0a529595abb02c569c99763203f3964cc
+    dest: ~/bin/bazel
+    mode: 0755
 
 - name: Add bash completion script to bashrc
   lineinfile:
