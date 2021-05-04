@@ -29,6 +29,7 @@ common_apt_packages:
   - zsh
   - rdesktop
   - gh  # github cli
+  - ncdu
 
 common_pip_packages:
   - psutil
