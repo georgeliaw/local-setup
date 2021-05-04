@@ -6,7 +6,9 @@ Currently setup for Ubuntu 20.04.
 
 Simply run `install.sh` and follow any prompts that come up.
 
-NOTE: Below notes about Gnome are being deprecated as I'm switching to KDE
+NOTES:
+- Below notes about Gnome are being deprecated as I'm switching to KDE
+- May need to run `apt-get install --install-recommends linux-generic-hwe-20.04` on Ubuntu 20.04 to pick up all hardware enablement packages
 
 ### KDE Setup
 
