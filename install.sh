@@ -9,6 +9,10 @@ sudo apt-get install python2.7 python2.7-dev python3.7 python3.7-dev python3-dev
 sudo apt-get install python3-distutils -y
 
 # Update bashrc
+mkdir -p $HOME/bin
+if [[ -z $(grep '^export PATH="$PATH:$HOME/bin"$' ~/.bashrc) ]]; then
+    echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
+fi
 if [[ -z $(grep '^export PATH="$PATH:$HOME/.local/bin"$' ~/.bashrc) ]]; then
     echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 fi

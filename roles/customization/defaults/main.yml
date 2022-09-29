@@ -1,17 +1,15 @@
 ---
 # defaults file for common
 
-custom_apt_repos:
-  - ppa:snwh/ppa
+custom_apt_repos: []
+#  - ppa:snwh/ppa
 
 custom_remove_apt_packages:
   - lightdm
 
 custom_apt_packages:
   # desktop
-  - paper-icon-theme
-  - kubuntu-desktop
-  - latte-dock
+#  - paper-icon-theme
 
   # tools
   - tilix

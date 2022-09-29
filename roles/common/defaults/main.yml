@@ -2,14 +2,13 @@
 # defaults file for common
 common_apt_keys:
   - keyserver: keyserver.ubuntu.com
-    id: C99B11DEB97541F0  # github cli
+    id: 23F3D4EA75716059  # github cli
 
 common_apt_repos:
-  - "deb https://cli.github.com/packages {{ ansible_distribution_release }} main"
+  - "deb [arch=amd64] https://cli.github.com/packages stable main"
 
 common_apt_packages:
   # system
-  - python-dev
   - python3.7-dev
   #- gir1.2-gtop-2.0
   #- gir1.2-networkmanager-1.0
@@ -36,11 +35,7 @@ common_pip_packages:
   - psutil
   - virtualenvwrapper
 
-common_slack_version: 4.10.3
-common_slack_download_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ common_slack_version }}-amd64.deb"
-
 common_chrome_download_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
 common_deb_packages:
-  - "{{ common_slack_download_url }}"
   - "{{ common_chrome_download_url }}"

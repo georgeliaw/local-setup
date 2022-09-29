@@ -25,12 +25,12 @@
   become: yes
   with_items: "{{ custom_deb_packages }}"
 
-- name: Make tilix the default terminal
-  alternatives:
-    name: x-terminal-emulator
-    path: /usr/bin/tilix
-    priority: 30
-  become: yes
+#- name: Make tilix the default terminal
+#  alternatives:
+#    name: x-terminal-emulator
+#    path: /usr/bin/tilix
+#    priority: 30
+#  become: yes
 
 # move window controls to the right side (default is 'close,minimize,maximize:')
 #- name: Move window controls to the right side
