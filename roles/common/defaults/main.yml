@@ -2,14 +2,15 @@
 # defaults file for common
 common_apt_keys:
   - keyserver: keyserver.ubuntu.com
-    id: C99B11DEB97541F0  # github cli
+    id: 23F3D4EA75716059  # github cli
 
 common_apt_repos:
-  - "deb https://cli.github.com/packages {{ ansible_distribution_release }} main"
+  #- "deb https://cli.github.com/packages stable main"
+  - "deb [arch=amd64] https://cli.github.com/packages stable main"
 
 common_apt_packages:
   # system
-  - python-dev
+  #- python-dev (deprecated)
   - python3.7-dev
   #- gir1.2-gtop-2.0
   #- gir1.2-networkmanager-1.0
