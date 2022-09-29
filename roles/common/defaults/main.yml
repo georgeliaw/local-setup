@@ -5,7 +5,6 @@ common_apt_keys:
     id: 23F3D4EA75716059  # github cli
 
 common_apt_repos:
-  #- "deb https://cli.github.com/packages stable main"
   - "deb [arch=amd64] https://cli.github.com/packages stable main"
 
 common_apt_packages:
