@@ -20,7 +20,9 @@ common_apt_packages:
   - libsasl2-dev
 
   # tools
-  - silversearcher-ag
+  - gnome-keyring
+  - ripgrep
+  - fzf
   - curl
   - htop
   - iotop
