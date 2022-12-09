@@ -32,6 +32,7 @@ common_apt_packages:
   - gh  # github cli
   - ncdu
   - cloc
+  - amazon-ecr-credential-helper
 
 common_pip_packages:
   - psutil
